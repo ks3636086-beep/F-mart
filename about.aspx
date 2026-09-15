@@ -1,17 +1,24 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="about.aspx.cs" Inherits="about" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="about.aspx.cs" Inherits="about" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!-- Page Title -->
     <div class="page-title light-background">
-        <div class="container d-lg-flex justify-content-between align-items-center">
-            <h1 class="mb-2 mb-lg-0">About</h1>
+        <div class="container flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2 sm:gap-3">
+
+            <h1 class="mb-0 text-2xl sm:text-3xl">About
+            </h1>
+
             <nav class="breadcrumbs">
-                <ol>
-                    <li><a href="index.aspx">Home</a></li>
-                    <li class="current">About</li>
+                <ol class="flex flex-wrap items-center gap-2 mb-0">
+                    <li>
+                        <a href="index.aspx">Home</a>
+                    </li>
+                    <li class="current">About
+                    </li>
                 </ol>
             </nav>
+
         </div>
     </div>
     <!-- End Page Title -->

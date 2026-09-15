@@ -30,6 +30,7 @@ public partial class index : System.Web.UI.Page
             BindData2();
             BindData3();
             BindData4();
+            BindCategories();
         }
     }
 
@@ -131,4 +132,23 @@ public partial class index : System.Web.UI.Page
 
     }
 
+    private void BindCategories()
+    {
+        DataTable dt = new DataTable();
+
+        dt.Columns.Add("CategoryId");
+        dt.Columns.Add("CategoryName");
+        dt.Columns.Add("Image");
+
+        dt.Rows.Add("1", "Chairs", "assets/img/product/cate1.png");
+        dt.Rows.Add("2", "Office Tables", "assets/img/product/cate2.png");
+        dt.Rows.Add("3", "Cafeteria", "assets/img/product/cate4.png");
+        dt.Rows.Add("4", "Storage & Metal", "assets/img/product/cate5.png");
+        dt.Rows.Add("5", "Educational & Hostel", "assets/img/product/cate6.png");
+        dt.Rows.Add("6", "Auditorium", "assets/img/product/cate7.png");
+        dt.Rows.Add("7", "Sofas & Lounge", "assets/img/product/cate8.png");
+
+        rptCategory.DataSource = dt;
+        rptCategory.DataBind();
+    }
 }
