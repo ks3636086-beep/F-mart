@@ -137,7 +137,7 @@
                     <div class="swiper-slide">
                         <div class="category-card cat-trending">
                             <div class="category-image">
-                                <img src="assets/img/product/product-f-2.png" alt="Perfect Space Together"
+                                <img src="assets/img/office-sofa.png" alt="Perfect Space Together"
                                     class="img-fluid">
                             </div>
                             <div class="category-content">
@@ -154,7 +154,7 @@
                     <div class="swiper-slide">
                         <div class="category-card cat-men">
                             <div class="category-image">
-                                <img src="assets/img/product/product-m-5.png" alt="Office Furniture"
+                                <img src="assets/img/workstation-chair.png" alt="Office Furniture"
                                     class="img-fluid">
                             </div>
                             <div class="category-content">
@@ -1203,7 +1203,636 @@
     </section>
     <!-- /Call To Action Section -->
 
+    <!-- =======================================================
+         Customer Reviews & Testimonials Section (Compact & Responsive)
+    ======================================================== -->
+    <style>
+        .fmart-reviews-section {
+            padding: 50px 0 45px;
+            background: linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid #edf3f6;
+            border-bottom: 1px solid #edf3f6;
+        }
 
+        .rev-header-wrap {
+            margin-bottom: 22px;
+        }
+
+        .rev-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e7f7fa;
+            color: #0097b2;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 12.5px;
+            font-weight: 700;
+            border: 1px solid rgba(0, 151, 178, 0.2);
+        }
+
+        .rev-sub-count {
+            color: #64748b;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .rev-heading {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.3px;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 4px;
+        }
+
+            .rev-heading .rev-accent {
+                color: #0097b2;
+            }
+
+        .rev-arrows-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .rev-arrow-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1px solid #dbe5ea;
+            color: #0f172a;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+        }
+
+            .rev-arrow-btn:hover {
+                background: #0097b2;
+                color: #ffffff;
+                border-color: #0097b2;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(0, 151, 178, 0.25);
+            }
+
+        /* Review Card */
+        .fmart-reviews-swiper {
+            padding-bottom: 22px !important;
+        }
+
+        .fmart-rev-card {
+            background: #ffffff;
+            border: 1px solid #e5edf2;
+            border-radius: 16px;
+            padding: 18px 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+            position: relative;
+        }
+
+            .fmart-rev-card:hover {
+                transform: translateY(-3px);
+                border-color: rgba(0, 151, 178, 0.35);
+                box-shadow: 0 10px 24px rgba(0, 151, 178, 0.09);
+            }
+
+        .rev-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .rev-stars {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            color: #f59e0b;
+            font-size: 13px;
+        }
+
+            .rev-stars .rev-rating-num {
+                font-size: 12.5px;
+                font-weight: 700;
+                color: #0f172a;
+                margin-left: 3px;
+            }
+
+        .rev-verified-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #ecfdf5;
+            color: #059669;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 7px;
+            border-radius: 12px;
+            border: 1px solid rgba(5, 150, 105, 0.15);
+        }
+
+        .rev-title {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 6px 0 6px;
+            line-height: 1.35;
+        }
+
+        .rev-content {
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            flex-grow: 1;
+        }
+
+        .rev-product-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #f1f6f8;
+            color: #007e94;
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            width: fit-content;
+        }
+
+            .rev-product-tag i {
+                font-size: 11px;
+            }
+
+        .rev-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 12px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .rev-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rev-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .rev-author-name {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .rev-author-place {
+            font-size: 11.5px;
+            color: #64748b;
+            margin: 2px 0 0;
+        }
+
+        .rev-helpful-btn {
+            background: transparent;
+            border: 1px solid #e2e8f0;
+            padding: 3px 8px;
+            border-radius: 14px;
+            font-size: 11px;
+            color: #64748b;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+            .rev-helpful-btn:hover, .rev-helpful-btn.liked {
+                background: #e7f7fa;
+                color: #0097b2;
+                border-color: #0097b2;
+            }
+
+        /* Swiper Pagination */
+        .rev-swiper-pagination {
+            position: relative !important;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+            .rev-swiper-pagination .swiper-pagination-bullet {
+                width: 7px;
+                height: 7px;
+                background: #cbd5e1;
+                opacity: 1;
+                transition: all 0.25s ease;
+                border-radius: 10px;
+                margin: 0 3px;
+            }
+
+            .rev-swiper-pagination .swiper-pagination-bullet-active {
+                width: 20px;
+                background: #0097b2;
+            }
+
+        /* Responsive Mobile Tuning */
+        @media (max-width: 767.98px) {
+            .fmart-reviews-section {
+                padding: 32px 0 28px;
+            }
+
+            .rev-header-wrap {
+                margin-bottom: 16px;
+            }
+
+            .rev-heading {
+                font-size: 1.35rem;
+            }
+
+            .fmart-rev-card {
+                padding: 15px 16px;
+            }
+
+            .rev-arrow-btn {
+                width: 32px;
+                height: 32px;
+                font-size: 13px;
+            }
+
+            .rev-title {
+                font-size: 14px;
+            }
+
+            .rev-content {
+                font-size: 12.5px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+
+    <section id="customer-reviews" class="fmart-reviews-section section">
+        <div class="container">
+
+            <!-- Compact Header -->
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <div>
+                    <h3 class="rev-heading m-0">Customer Reviews</h3>
+                    <div class="mt-1">
+                        <span class="text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </span>
+                        <span class="text-muted small ms-1">4.9 out of 5</span>
+                    </div>
+                </div>
+
+                <div class="rev-arrows-wrap">
+                    <button type="button" class="rev-arrow-btn rev-prev-btn" aria-label="Previous Review">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button type="button" class="rev-arrow-btn rev-next-btn" aria-label="Next Review">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Review Cards Carousel -->
+           <!-- Review Cards Carousel -->
+<div class="swiper fmart-reviews-swiper" id="fmartCompactSwiper">
+    <div class="swiper-wrapper">
+
+        <!-- Review 1 -->
+        <div class="swiper-slide">
+            <div class="fmart-rev-card">
+                <div class="rev-card-header">
+                    <div class="rev-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <span class="rev-rating-num">5.0</span>
+                    </div>
+                    <span class="rev-verified-tag">
+                        <i class="bi bi-patch-check-fill"></i> Verified
+                    </span>
+                </div>
+
+                <h4 class="rev-title">Very comfortable chair</h4>
+
+                <p class="rev-content">
+                    Good quality and comfortable for long working hours. The chair was delivered safely and looks exactly as shown.
+                </p>
+
+                <div class="rev-card-footer">
+                    <div class="rev-author">
+                        <div class="rev-avatar">VS</div>
+                        <div>
+                            <h6 class="rev-author-name">Vikram S.</h6>
+                            <p class="rev-author-place">Bengaluru</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>34</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="swiper-slide">
+            <div class="fmart-rev-card">
+                <div class="rev-card-header">
+                    <div class="rev-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <span class="rev-rating-num">5.0</span>
+                    </div>
+                    <span class="rev-verified-tag">
+                        <i class="bi bi-patch-check-fill"></i> Verified
+                    </span>
+                </div>
+
+                <h4 class="rev-title">Good quality and finish</h4>
+
+                <p class="rev-content">
+                    The finish is really good and the desk feels sturdy. Packaging was also good and delivery was on time.
+                </p>
+
+                <div class="rev-card-footer">
+                    <div class="rev-author">
+                        <div class="rev-avatar">PN</div>
+                        <div>
+                            <h6 class="rev-author-name">Pooja N.</h6>
+                            <p class="rev-author-place">Mumbai</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>28</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="swiper-slide">
+            <div class="fmart-rev-card">
+                <div class="rev-card-header">
+                    <div class="rev-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <span class="rev-rating-num">5.0</span>
+                    </div>
+                    <span class="rev-verified-tag">
+                        <i class="bi bi-patch-check-fill"></i> Verified
+                    </span>
+                </div>
+
+                <h4 class="rev-title">Strong and worth the price</h4>
+
+                <p class="rev-content">
+                    The build quality is good and the product feels durable. Happy with the purchase and overall service.
+                </p>
+
+                <div class="rev-card-footer">
+                    <div class="rev-author">
+                        <div class="rev-avatar">AS</div>
+                        <div>
+                            <h6 class="rev-author-name">Arvind S.</h6>
+                            <p class="rev-author-place">Pune</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>45</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="swiper-slide">
+            <div class="fmart-rev-card">
+                <div class="rev-card-header">
+                    <div class="rev-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <span class="rev-rating-num">5.0</span>
+                    </div>
+                    <span class="rev-verified-tag">
+                        <i class="bi bi-patch-check-fill"></i> Verified
+                    </span>
+                </div>
+
+                <h4 class="rev-title">Perfect for home office</h4>
+
+                <p class="rev-content">
+                    Very useful for daily work from home. Easy to use, comfortable and the quality is better than expected.
+                </p>
+
+                <div class="rev-card-footer">
+                    <div class="rev-author">
+                        <div class="rev-avatar">AD</div>
+                        <div>
+                            <h6 class="rev-author-name">Ananya D.</h6>
+                            <p class="rev-author-place">Hyderabad</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>52</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="swiper-slide">
+            <div class="fmart-rev-card">
+                <div class="rev-card-header">
+                    <div class="rev-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <span class="rev-rating-num">5.0</span>
+                    </div>
+                    <span class="rev-verified-tag">
+                        <i class="bi bi-patch-check-fill"></i> Verified
+                    </span>
+                </div>
+
+                <h4 class="rev-title">Looks premium</h4>
+
+                <p class="rev-content">
+                    The product looks premium and feels comfortable to use. Delivery was quick and the overall experience was good.
+                </p>
+
+                <div class="rev-card-footer">
+                    <div class="rev-author">
+                        <div class="rev-avatar">RM</div>
+                        <div>
+                            <h6 class="rev-author-name">Rohan M.</h6>
+                            <p class="rev-author-place">Gurugram</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>19</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="swiper-slide">
+            <div class="fmart-rev-card">
+                <div class="rev-card-header">
+                    <div class="rev-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <span class="rev-rating-num">5.0</span>
+                    </div>
+                    <span class="rev-verified-tag">
+                        <i class="bi bi-patch-check-fill"></i> Verified
+                    </span>
+                </div>
+
+                <h4 class="rev-title">Good product for the price</h4>
+
+                <p class="rev-content">
+                    Nice quality and simple design. The product was well packed and installation was easy.
+                </p>
+
+                <div class="rev-card-footer">
+                    <div class="rev-author">
+                        <div class="rev-avatar">SK</div>
+                        <div>
+                            <h6 class="rev-author-name">Sneha K.</h6>
+                            <p class="rev-author-place">New Delhi</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>41</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+            <!-- Dots Pagination -->
+            <div class="rev-swiper-pagination" id="revCompactPagination"></div>
+
+        </div>
+    </section>
+
+    <!-- Review Section Compact Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof Swiper !== 'undefined') {
+                new Swiper('#fmartCompactSwiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                    loop: true,
+                    speed: 600,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    },
+                    navigation: {
+                        nextEl: '.rev-next-btn',
+                        prevEl: '.rev-prev-btn'
+                    },
+                    pagination: {
+                        el: '#revCompactPagination',
+                        clickable: true
+                    },
+                    breakpoints: {
+                        576: {
+                            slidesPerView: 1.15,
+                            spaceBetween: 16
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 18
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        }
+                    }
+                });
+            }
+        });
+
+        function toggleRevLike(btn) {
+            const countSpan = btn.querySelector('span');
+            let count = parseInt(countSpan.textContent, 10) || 0;
+            if (btn.classList.contains('liked')) {
+                btn.classList.remove('liked');
+                countSpan.textContent = count - 1;
+            } else {
+                btn.classList.add('liked');
+                countSpan.textContent = count + 1;
+            }
+        }
+    </script>
+    <!-- /Customer Reviews & Testimonials Section -->
 
 
 
@@ -1660,7 +2289,5 @@
 
     </section>
     <!-- /FAQ Section -->
-
-
 
 </asp:Content>

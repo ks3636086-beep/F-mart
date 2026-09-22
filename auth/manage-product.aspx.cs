@@ -57,7 +57,6 @@ public partial class auth_manage_product : System.Web.UI.Page
             grdproducts.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
         }
 
-
         con.Close();
 
     }

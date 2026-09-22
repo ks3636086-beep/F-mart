@@ -29,6 +29,13 @@ public partial class category : System.Web.UI.Page
         {
             BindData();
             BindData2();
+
+            string catid = Request.QueryString["catid"];
+
+            if (!string.IsNullOrEmpty(catid))
+            {
+                BindProducts(catid);
+            }
         }
     }
 
@@ -218,5 +225,43 @@ public partial class category : System.Web.UI.Page
             }
         }
         return id;
+    }
+
+
+    private void BindProducts(string catid)
+    {
+        string query = @"SELECT a.*, b.*, c.*
+                     FROM ecommerce_product a
+                     LEFT JOIN ecommerce_product_price b ON a.product_id = b.product_id
+                     LEFT JOIN ecommerce_product_photos c ON a.product_id = c.product_id
+                     WHERE a.product_parent_category_id = @catid
+                        OR a.product_sub_category_id = @catid
+                     ORDER BY a.id DESC";
+
+        using (SqlConnection con = new SqlConnection(cs))
+        {
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                cmd.Parameters.AddWithValue("@catid", catid);
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    Repeater1.DataSource = dt;
+                    Repeater1.DataBind();
+                }
+            }
+        }
+
+        if (Repeater1.Items.Count == 0)
+        {
+            NoDataPanel.Visible = true;
+        }
+        else
+        {
+            NoDataPanel.Visible = false;
+        }
     }
 }

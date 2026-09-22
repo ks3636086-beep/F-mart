@@ -42,10 +42,10 @@
             transition: color 0.2s;
         }
 
-        .amz-breadcrumbs a:hover {
-            color: var(--amz-link-hover);
-            text-decoration: underline;
-        }
+            .amz-breadcrumbs a:hover {
+                color: var(--amz-link-hover);
+                text-decoration: underline;
+            }
 
         .amz-bc-divider {
             margin: 0 6px;
@@ -88,9 +88,9 @@
             transition: border-color 0.25s;
         }
 
-        .amz-main-image-box:hover {
-            border-color: #bbb;
-        }
+            .amz-main-image-box:hover {
+                border-color: #bbb;
+            }
 
         .amz-main-img {
             max-width: 100%;
@@ -100,9 +100,9 @@
             cursor: zoom-in;
         }
 
-        .amz-main-img:hover {
-            transform: scale(1.04);
-        }
+            .amz-main-img:hover {
+                transform: scale(1.04);
+            }
 
         .amz-gallery-share-btn {
             position: absolute;
@@ -123,10 +123,10 @@
             z-index: 5;
         }
 
-        .amz-gallery-share-btn:hover {
-            background: #f7fafa;
-            border-color: #888;
-        }
+            .amz-gallery-share-btn:hover {
+                background: #f7fafa;
+                border-color: #888;
+            }
 
         .amz-view-hint {
             text-align: center;
@@ -159,17 +159,17 @@
             transition: all 0.2s ease;
         }
 
-        .amz-thumb-wrapper:hover,
-        .amz-thumb-wrapper.active {
-            border: 2px solid #e77600;
-            box-shadow: 0 0 4px rgba(231, 118, 0, 0.4);
-        }
+            .amz-thumb-wrapper:hover,
+            .amz-thumb-wrapper.active {
+                border: 2px solid #e77600;
+                box-shadow: 0 0 4px rgba(231, 118, 0, 0.4);
+            }
 
-        .amz-thumb-wrapper img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
+            .amz-thumb-wrapper img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
 
         /* ---------------- CENTER: Details Column ---------------- */
         .amz-center-col {
@@ -194,10 +194,10 @@
             font-weight: 500;
         }
 
-        .amz-brand-link:hover {
-            color: var(--amz-link-hover);
-            text-decoration: underline;
-        }
+            .amz-brand-link:hover {
+                color: var(--amz-link-hover);
+                text-decoration: underline;
+            }
 
         /* Rating & Badge Row */
         .amz-rating-row {
@@ -226,10 +226,10 @@
             text-decoration: none;
         }
 
-        .amz-reviews-link:hover {
-            color: var(--amz-link-hover);
-            text-decoration: underline;
-        }
+            .amz-reviews-link:hover {
+                color: var(--amz-link-hover);
+                text-decoration: underline;
+            }
 
         .amz-choice-badge {
             background-color: var(--amz-pill-choice);
@@ -243,9 +243,9 @@
             gap: 4px;
         }
 
-        .amz-choice-badge .badge-highlight {
-            color: #e77600;
-        }
+            .amz-choice-badge .badge-highlight {
+                color: #e77600;
+            }
 
         .amz-past-bought {
             font-size: 12px;
@@ -253,9 +253,9 @@
             margin-bottom: 12px;
         }
 
-        .amz-past-bought strong {
-            color: var(--amz-dark);
-        }
+            .amz-past-bought strong {
+                color: var(--amz-dark);
+            }
 
         .amz-divider {
             border: 0;
@@ -316,16 +316,16 @@
             margin-top: 6px;
         }
 
-        .amz-emi-banner a {
-            color: var(--amz-link);
-            text-decoration: none;
-            font-weight: 500;
-        }
+            .amz-emi-banner a {
+                color: var(--amz-link);
+                text-decoration: none;
+                font-weight: 500;
+            }
 
-        .amz-emi-banner a:hover {
-            color: var(--amz-link-hover);
-            text-decoration: underline;
-        }
+                .amz-emi-banner a:hover {
+                    color: var(--amz-link-hover);
+                    text-decoration: underline;
+                }
 
         /* Offers Section (Cards) */
         .amz-offers-section {
@@ -342,10 +342,10 @@
             margin-bottom: 10px;
         }
 
-        .amz-offers-title i {
-            color: #c7511f;
-            font-size: 16px;
-        }
+            .amz-offers-title i {
+                color: #c7511f;
+                font-size: 16px;
+            }
 
         .amz-offers-grid {
             display: grid;
@@ -389,10 +389,10 @@
             font-size: 11px;
         }
 
-        .amz-offer-link:hover {
-            color: var(--amz-link-hover);
-            text-decoration: underline;
-        }
+            .amz-offer-link:hover {
+                color: var(--amz-link-hover);
+                text-decoration: underline;
+            }
 
         /* 6 Amazon Service Icons Strip */
         .amz-services-strip {
@@ -439,10 +439,10 @@
             font-size: 13px;
         }
 
-        .amz-specs-table tr td {
-            padding: 5px 0;
-            vertical-align: top;
-        }
+            .amz-specs-table tr td {
+                padding: 5px 0;
+                vertical-align: top;
+            }
 
         .amz-spec-label {
             font-weight: 600;
@@ -462,11 +462,11 @@
             line-height: 1.5;
         }
 
-        .amz-description-box h4 {
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
+            .amz-description-box h4 {
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 6px;
+            }
 
         /* ---------------- RIGHT: Buy Box Column ---------------- */
         .amz-buybox-card {
@@ -504,15 +504,15 @@
             margin-bottom: 10px;
         }
 
-        .amz-delivery-info a {
-            color: var(--amz-link);
-            text-decoration: none;
-        }
+            .amz-delivery-info a {
+                color: var(--amz-link);
+                text-decoration: none;
+            }
 
-        .amz-delivery-info a:hover {
-            color: var(--amz-link-hover);
-            text-decoration: underline;
-        }
+                .amz-delivery-info a:hover {
+                    color: var(--amz-link-hover);
+                    text-decoration: underline;
+                }
 
         .amz-location-row {
             display: flex;
@@ -524,9 +524,9 @@
             cursor: pointer;
         }
 
-        .amz-location-row:hover {
-            color: var(--amz-link-hover);
-        }
+            .amz-location-row:hover {
+                color: var(--amz-link-hover);
+            }
 
         .amz-stock-status {
             color: #007600;
@@ -572,9 +572,9 @@
             font-size: 14px;
         }
 
-        .amz-qty-btn:hover {
-            background: #e3e6e6;
-        }
+            .amz-qty-btn:hover {
+                background: #e3e6e6;
+            }
 
         .amz-qty-input {
             width: 44px;
@@ -610,13 +610,13 @@
             margin-bottom: 10px;
         }
 
-        .amz-btn-cart:hover {
-            background: color-mix(in srgb, var(--accent-color, #0097b2), #000 15%);
-            border-color: color-mix(in srgb, var(--accent-color, #0097b2), #000 15%);
-            color: #ffffff;
-            box-shadow: 0 6px 18px rgba(0, 151, 178, 0.38);
-            transform: translateY(-1px);
-        }
+            .amz-btn-cart:hover {
+                background: color-mix(in srgb, var(--accent-color, #0097b2), #000 15%);
+                border-color: color-mix(in srgb, var(--accent-color, #0097b2), #000 15%);
+                color: #ffffff;
+                box-shadow: 0 6px 18px rgba(0, 151, 178, 0.38);
+                transform: translateY(-1px);
+            }
 
         .amz-btn-buynow {
             width: 100%;
@@ -637,13 +637,13 @@
             margin-bottom: 12px;
         }
 
-        .amz-btn-buynow:hover {
-            background: var(--accent-color, #0097b2);
-            border-color: var(--accent-color, #0097b2);
-            color: #ffffff;
-            box-shadow: 0 6px 18px rgba(0, 151, 178, 0.38);
-            transform: translateY(-1px);
-        }
+            .amz-btn-buynow:hover {
+                background: var(--accent-color, #0097b2);
+                border-color: var(--accent-color, #0097b2);
+                color: #ffffff;
+                box-shadow: 0 6px 18px rgba(0, 151, 178, 0.38);
+                transform: translateY(-1px);
+            }
 
         .amz-btn-wishlist {
             width: 100%;
@@ -663,10 +663,10 @@
             margin-bottom: 14px;
         }
 
-        .amz-btn-wishlist:hover {
-            background: #e3e6e6;
-            border-color: #bbb;
-        }
+            .amz-btn-wishlist:hover {
+                background: #e3e6e6;
+                border-color: #bbb;
+            }
 
         /* Seller & Meta Rows */
         .amz-meta-table {
@@ -678,9 +678,9 @@
             margin-top: 6px;
         }
 
-        .amz-meta-table tr td {
-            padding: 3px 0;
-        }
+            .amz-meta-table tr td {
+                padding: 3px 0;
+            }
 
         .amz-meta-label {
             width: 42%;
@@ -692,15 +692,15 @@
             font-weight: 500;
         }
 
-        .amz-meta-val a {
-            color: var(--amz-link);
-            text-decoration: none;
-        }
+            .amz-meta-val a {
+                color: var(--amz-link);
+                text-decoration: none;
+            }
 
-        .amz-meta-val a:hover {
-            color: var(--amz-link-hover);
-            text-decoration: underline;
-        }
+                .amz-meta-val a:hover {
+                    color: var(--amz-link-hover);
+                    text-decoration: underline;
+                }
 
         /* Protection Plan Box */
         .amz-protection-box {
@@ -724,9 +724,9 @@
             cursor: pointer;
         }
 
-        .amz-protection-option input {
-            margin-top: 3px;
-        }
+            .amz-protection-option input {
+                margin-top: 3px;
+            }
 
         /* Bottom Tabs & Details */
         .amz-bottom-details {
@@ -740,21 +740,21 @@
             margin-bottom: 20px;
         }
 
-        .amz-tab-nav .nav-link {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--amz-text-muted);
-            border: 0;
-            border-bottom: 3px solid transparent;
-            padding: 10px 18px;
-            border-radius: 0;
-        }
+            .amz-tab-nav .nav-link {
+                font-size: 15px;
+                font-weight: 600;
+                color: var(--amz-text-muted);
+                border: 0;
+                border-bottom: 3px solid transparent;
+                padding: 10px 18px;
+                border-radius: 0;
+            }
 
-        .amz-tab-nav .nav-link.active {
-            color: #e77600;
-            border-bottom: 3px solid #e77600;
-            background: transparent;
-        }
+                .amz-tab-nav .nav-link.active {
+                    color: #e77600;
+                    border-bottom: 3px solid #e77600;
+                    background: transparent;
+                }
 
         /* Responsive Layout Tweaks */
         @media (max-width: 991.98px) {
@@ -785,11 +785,157 @@
                 font-size: 24px;
             }
         }
+
+        /* ================== SIMILAR PRODUCTS SECTION (MATCHING INDEX STYLE) ================== */
+        .similar-products-section {
+            margin-top: 50px;
+            padding-top: 35px;
+            border-top: 1px solid #e7e7e7;
+        }
+
+        .similar-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            background: rgba(0, 151, 178, 0.08);
+            color: #0097b2;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            border: 1px solid rgba(0, 151, 178, 0.2);
+        }
+
+        .similar-title {
+            font-size: clamp(1.25rem, 2vw, 1.55rem);
+            font-weight: 700;
+            color: #111827;
+            letter-spacing: -0.3px;
+        }
+
+        .similar-subtitle {
+            font-size: 0.88rem;
+            color: #6b7280;
+        }
+
+        .similar-view-all-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #0097b2;
+            text-decoration: none;
+            padding: 6px 14px;
+            border: 1px solid rgba(0, 151, 178, 0.3);
+            border-radius: 8px;
+            background: #ffffff;
+            transition: all 0.25s ease;
+        }
+
+            .similar-view-all-link:hover {
+                background: #0097b2;
+                color: #ffffff;
+                border-color: #0097b2;
+                transform: translateX(3px);
+            }
+
+        /* 6-Column Desktop & 2-Column Mobile Tuning for Similar Products */
+        .similar-products-section .product-image {
+            aspect-ratio: 1 / 1;
+            border-radius: 12px;
+        }
+
+            .similar-products-section .product-image img {
+                padding: 8px;
+            }
+
+        .similar-products-section .product-info {
+            padding: 8px 2px 2px 2px;
+        }
+
+        .similar-products-section .product-name {
+            font-size: 0.84rem;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .similar-products-section .product-price {
+            gap: 4px;
+            margin-bottom: 1px;
+        }
+
+            .similar-products-section .product-price .sale-price {
+                font-size: 0.95rem;
+            }
+
+            .similar-products-section .product-price .original-price {
+                font-size: 0.78rem;
+            }
+
+        .similar-products-section .bank-offer {
+            font-size: 0.72rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .similar-products-section .rating-pill {
+            bottom: 6px;
+            left: 6px;
+            padding: 1px 6px;
+        }
+
+            .similar-products-section .rating-pill .rating-score {
+                font-size: 0.72rem;
+            }
+
+            .similar-products-section .rating-pill .rating-star {
+                font-size: 0.68rem;
+            }
+
+            .similar-products-section .rating-pill .rating-count {
+                font-size: 0.65rem;
+            }
+
+        .similar-products-section .cart-btn {
+            font-size: 0.72rem;
+            padding: 4px 9px;
+            bottom: 6px;
+            right: 6px;
+        }
+
+        .similar-products-section .wishlist-btn {
+            width: 28px;
+            height: 28px;
+            font-size: 0.8rem;
+            top: 6px;
+            right: 6px;
+        }
+
+        @media (max-width: 575.98px) {
+            .similar-products-section .product-name {
+                font-size: 0.8rem;
+            }
+
+            .similar-products-section .product-price .sale-price {
+                font-size: 0.88rem;
+            }
+
+            .similar-products-section .product-price .original-price {
+                font-size: 0.72rem;
+            }
+        }
     </style>
 
     <!-- 1. Breadcrumbs Bar -->
     <div class="amz-breadcrumb-bar">
-        <div class="container-fluid px-lg-4">
+        <div class="container">
             <nav class="amz-breadcrumbs">
                 <a href="index.aspx">Home</a>
                 <span class="amz-bc-divider">&rsaquo;</span>
@@ -804,13 +950,13 @@
 
     <!-- 2. Main 3-Column Product Section -->
     <section class="amz-product-wrapper">
-        <div class="container-fluid px-lg-4">
+        <div class="container">
             <div class="row g-4">
 
                 <!-- ================== COLUMN 1: GALLERY ================== -->
                 <div class="col-xl-4 col-lg-5 col-md-6 amz-gallery-col">
                     <div class="amz-gallery-sticky">
-                        
+
                         <!-- Main Showcase Box -->
                         <div class="amz-main-image-box">
                             <!-- Share Button -->
@@ -823,7 +969,8 @@
                         </div>
 
                         <div class="amz-view-hint">
-                            <i class="bi bi-search me-1"></i> Roll over image to zoom in | Click thumbnail to switch
+                            <i class="bi bi-search me-1"></i>Roll over image to zoom in | Click thumbnail to switch
+                       
                         </div>
 
                         <!-- Thumbnails Row (Repeater Kept 100% Intact) -->
@@ -844,8 +991,7 @@
                 <div class="col-xl-5 col-lg-4 col-md-6 amz-center-col">
 
                     <!-- Title (Kept 100% Intact) -->
-                    <h1 class="amz-product-title" id="product_name" runat="server">
-                        Mauris tempus cursus magna vel scelerisque nisl consectetur
+                    <h1 class="amz-product-title" id="product_name" runat="server">Mauris tempus cursus magna vel scelerisque nisl consectetur
                     </h1>
 
                     <!-- Store Link -->
@@ -863,6 +1009,7 @@
 
                     <div class="amz-past-bought">
                         <strong>1K+ bought</strong> in past month
+                   
                     </div>
 
                     <hr class="amz-divider" />
@@ -886,9 +1033,10 @@
                     <hr class="amz-divider" />
 
                     <!-- Amazon Style Offers Section -->
-                    <div class="amz-offers-section">
+                   <%-- <div class="amz-offers-section">
                         <div class="amz-offers-title">
-                            <i class="bi bi-percent"></i> Offers
+                            <i class="bi bi-percent"></i>Offers
+                       
                         </div>
                         <div class="amz-offers-grid">
                             <!-- Card 1: Cashback -->
@@ -918,7 +1066,7 @@
                                 <a href="javascript:void(0)" class="amz-offer-link">41 offers &rsaquo;</a>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
 
                     <hr class="amz-divider" />
 
@@ -926,27 +1074,33 @@
                     <div class="amz-services-strip">
                         <div class="amz-service-item">
                             <div class="amz-service-icon-box"><i class="bi bi-cash-stack"></i></div>
-                            <span class="amz-service-label">Pay on<br />Delivery</span>
+                            <span class="amz-service-label">Pay on<br />
+                                Delivery</span>
                         </div>
                         <div class="amz-service-item">
                             <div class="amz-service-icon-box"><i class="bi bi-arrow-repeat"></i></div>
-                            <span class="amz-service-label">10 days<br />Replacement</span>
+                            <span class="amz-service-label">10 days<br />
+                                Replacement</span>
                         </div>
                         <div class="amz-service-item">
                             <div class="amz-service-icon-box"><i class="bi bi-truck"></i></div>
-                            <span class="amz-service-label">Free<br />Delivery</span>
+                            <span class="amz-service-label">Free<br />
+                                Delivery</span>
                         </div>
                         <div class="amz-service-item">
                             <div class="amz-service-icon-box"><i class="bi bi-shield-check"></i></div>
-                            <span class="amz-service-label">2 Year<br />Warranty</span>
+                            <span class="amz-service-label">2 Year<br />
+                                Warranty</span>
                         </div>
                         <div class="amz-service-item">
                             <div class="amz-service-icon-box"><i class="bi bi-award"></i></div>
-                            <span class="amz-service-label">Top<br />Brand</span>
+                            <span class="amz-service-label">Top<br />
+                                Brand</span>
                         </div>
                         <div class="amz-service-item">
                             <div class="amz-service-icon-box"><i class="bi bi-lock"></i></div>
-                            <span class="amz-service-label">Secure<br />Transaction</span>
+                            <span class="amz-service-label">Secure<br />
+                                Transaction</span>
                         </div>
                     </div>
 
@@ -956,7 +1110,8 @@
                     <table class="amz-specs-table">
                         <tr>
                             <td class="amz-spec-label">Brand</td>
-                            <td class="amz-spec-val">Furniture Mart Official</td>
+                            <td class="amz-spec-val"><%# Eval("product_brand_name") %></td>
+                            <%--<td class="amz-spec-val">Furniture Mart Official</td>--%>
                         </tr>
                         <tr>
                             <td class="amz-spec-label">Material</td>
@@ -999,7 +1154,8 @@
 
                         <!-- Prime Tag -->
                         <div class="amz-prime-badge">
-                            <i class="bi bi-check2-circle"></i> prime
+                            <i class="bi bi-check2-circle"></i>prime
+                       
                         </div>
 
                         <!-- Delivery Timeline -->
@@ -1007,12 +1163,13 @@
                             <strong>FREE delivery</strong> <span id="delivery-day-text">Thursday, 18 September</span>. <a href="javascript:void(0)">Details</a>
                             <br />
                             Or fastest delivery <strong>Tomorrow, 5 PM - 9 PM</strong>.
+                       
                         </div>
 
                         <!-- Location Pin -->
                         <div class="amz-location-row" onclick="alert('Location updated successfully!')">
                             <i class="bi bi-geo-alt-fill text-danger"></i>
-                            <span>Delivering to your location - <span style="text-decoration:underline;">Update</span></span>
+                            <span>Delivering to your location - <span style="text-decoration: underline;">Update</span></span>
                         </div>
 
                         <!-- Stock Status -->
@@ -1034,15 +1191,18 @@
 
                         <!-- Amazon Action Buttons (Server Controls Kept 100% Intact) -->
                         <button class="amz-btn-cart" id="btncart" runat="server" onserverclick="btncart_ServerClick">
-                            <i class="bi bi-cart3"></i> Add to cart
+                            <i class="bi bi-cart3"></i>Add to cart
+                       
                         </button>
 
                         <button class="amz-btn-buynow" id="btncart2" runat="server" onserverclick="btncart2_ServerClick">
-                            <i class="bi bi-lightning-fill"></i> Buy Now
+                            <i class="bi bi-lightning-fill"></i>Buy Now
+                       
                         </button>
 
                         <button class="amz-btn-wishlist" title="Add to Wishlist" id="btnwishlist" runat="server" onserverclick="btnwishlist_ServerClick">
-                            <i class="bi bi-heart"></i> Add to Wish List
+                            <i class="bi bi-heart"></i>Add to Wish List
+                       
                         </button>
 
                         <!-- Ships From / Sold By Meta -->
@@ -1089,13 +1249,88 @@
                     <div class="tab-content pt-2">
                         <div class="tab-pane fade show active" id="amz-tab-overview">
                             <div class="p-3 bg-light rounded-3 border">
-                                <h4 class="fw-bold mb-3">Detailed Product Overview</h4>
-                                <asp:Label ID="descp" runat="server">
-                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+                                <h5 class="fw-bold mb-2">Product Overview</h5>
+
+                                <asp:Label ID="descp" runat="server" CssClass="text-muted small">
+        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
                                 </asp:Label>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- ================== SIMILAR PRODUCTS SECTION (MATCHING INDEX STYLE) ================== -->
+            <div class="similar-products-section best-sellers" id="similar-products">
+                <div class="similar-header-wrap mb-4">
+                    <h3 class="similar-title mb-1">Customers Also Viewed</h3>
+                    <p class="similar-subtitle text-muted mb-0">
+                        Explore similar products you may like
+                    </p>
+                </div>
+
+                <div class="row g-2 g-md-3">
+                    <asp:Repeater ID="rptSimilarProducts" runat="server" OnItemCommand="rptSimilarProducts_ItemCommand">
+                        <ItemTemplate>
+                            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+                                <div class="product-item">
+                                    <div class="product-image">
+                                        <a href='product-details.aspx?ref=<%# Eval("product_id") %>' class="product-img-link">
+                                            <img src='auth/<%# Eval("photo_path") %>' alt='<%# Eval("product_full_name") %>' class="img-fluid" loading="lazy">
+                                        </a>
+
+                                        <!-- Rating Pill Badge (Bottom-Left like Index/Flipkart) -->
+                                        <div class="rating-pill">
+                                            <span class="rating-score">4.6</span>
+                                            <span class="rating-star">&#9733;</span>
+                                            <span class="rating-count">(2,450)</span>
+                                        </div>
+
+                                        <!-- Wishlist Floating Button -->
+                                        <div class="product-actions">
+                                            <asp:LinkButton class="action-btn wishlist-btn" ID="btnSimWishlist"
+                                                runat="server" CommandName="Wishlist"
+                                                CommandArgument='<%# Eval("product_id") %>' ToolTip="Add to Wishlist">
+                                                <i class="bi bi-heart"></i>
+                                            </asp:LinkButton>
+                                        </div>
+
+                                        <!-- Add to Cart Floating Button -->
+                                        <asp:Button class="cart-btn" ID="btnSimCart" runat="server" CommandName="AddCart"
+                                            CommandArgument='<%# Eval("product_id") %>' Text="Add to Cart"></asp:Button>
+                                    </div>
+
+                                    <div class="product-info">
+                                        <asp:Label ID="price_id" runat="server" Text='<%# Eval("product_id") %>' hidden>
+                                        </asp:Label>
+
+                                        <h4 class="product-name">
+                                            <a href='product-details.aspx?ref=<%# Eval("product_id") %>' title='<%# Eval("product_full_name") %>'>
+                                                <%# Eval("product_full_name") %>
+                                            </a>
+                                        </h4>
+
+                                        <div class="product-price">
+                                            <%# Convert.ToString(Eval("product_market_price")) != "" && Convert.ToString(Eval("product_market_price")) != Convert.ToString(Eval("product_sell_price"))
+                                                ? "<span class=\"original-price\">&#8377;" + Eval("product_market_price") + "</span>" 
+                                                : "" %>
+                                            <span class="sale-price">&#8377;<%# Eval("product_sell_price") %></span>
+                                        </div>
+
+                                        <div class="bank-offer">
+                                            &#8377;<%# Eval("product_sell_price") %> with Bank offer
+                                       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+                    <!-- Fallback if no similar products found -->
+                    <asp:Panel ID="pnlNoSimilar" runat="server" Visible="false" class="col-12 text-center py-4">
+                        <p class="text-muted">More matching products coming soon!</p>
+                    </asp:Panel>
                 </div>
             </div>
 

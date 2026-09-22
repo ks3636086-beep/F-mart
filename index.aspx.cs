@@ -31,6 +31,7 @@ public partial class index : System.Web.UI.Page
             BindData3();
             BindData4();
             BindCategories();
+                         
         }
     }
 
@@ -151,4 +152,5 @@ public partial class index : System.Web.UI.Page
         rptCategory.DataSource = dt;
         rptCategory.DataBind();
     }
+
 }
