@@ -31,7 +31,7 @@ public partial class category : System.Web.UI.Page
             BindData2();
 
             string catid = Request.QueryString["catid"];
-
+            Response.Write("CATID = " + catid);
             if (!string.IsNullOrEmpty(catid))
             {
                 BindProducts(catid);

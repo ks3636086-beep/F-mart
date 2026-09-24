@@ -995,25 +995,25 @@
 
       swiperInstances[id] = new Swiper(swiperEl, {
         slidesPerView: 2,
-        spaceBetween: 14,
+        spaceBetween: 12,
         loop: false,
         speed: 500,
         breakpoints: {
           576: {
             slidesPerView: 2.5,
-            spaceBetween: 16
+            spaceBetween: 14
           },
           768: {
-            slidesPerView: 3,
-            spaceBetween: 20
+            slidesPerView: 3.5,
+            spaceBetween: 16
           },
           992: {
-            slidesPerView: 4,
-            spaceBetween: 24
+            slidesPerView: 4.5,
+            spaceBetween: 16
           },
           1200: {
-            slidesPerView: 5,
-            spaceBetween: 24
+            slidesPerView: 6,
+            spaceBetween: 16
           }
         }
       });
@@ -1083,23 +1083,35 @@
     const swiperEl = document.getElementById('swiper-cta-deals');
     if (!swiperEl || typeof Swiper === 'undefined') return;
 
+    if (swiperEl.swiper) {
+      swiperEl.swiper.update();
+      return;
+    }
+
     const ctaSwiper = new Swiper(swiperEl, {
       slidesPerView: 2,
-      spaceBetween: 14,
+      spaceBetween: 12,
       loop: false,
       speed: 500,
+      observer: true,
+      observeParents: true,
+      resizeObserver: true,
       breakpoints: {
         576: {
-          slidesPerView: 2.2,
-          spaceBetween: 16
+          slidesPerView: 2.5,
+          spaceBetween: 14
         },
         768: {
-          slidesPerView: 3,
-          spaceBetween: 20
+          slidesPerView: 3.5,
+          spaceBetween: 16
         },
         992: {
-          slidesPerView: 4,
-          spaceBetween: 24
+          slidesPerView: 4.5,
+          spaceBetween: 16
+        },
+        1200: {
+          slidesPerView: 6,
+          spaceBetween: 16
         }
       }
     });
@@ -1137,6 +1149,11 @@
     });
   }
 
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCtaDealsSwiper);
+  } else {
+    initCtaDealsSwiper();
+  }
   window.addEventListener('load', initCtaDealsSwiper);
 
 })();

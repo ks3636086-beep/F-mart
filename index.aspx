@@ -797,11 +797,7 @@
                         <div class="col-6 col-lg-3 col-md-6">
                             <div class="product-item">
                                 <div class="product-image">
-                                    <a href='product-details.aspx?ref=<%# Eval("product_id") %>'
-                                        class="product-img-link">
-                                        <img src='auth/<%# Eval("photo_path") %>'
-                                            alt='<%# Eval("product_full_name") %>' class="img-fluid" loading="lazy">
-                                    </a>
+                                    <a href='product-details.aspx?ref=<%# Eval("product_id") %>' class="product-img-link" title='<%# Eval("product_full_name") %>'><img src='auth/<%# Eval("photo_path") %>' alt='<%# Eval("product_full_name") %>' class="img-fluid" loading="lazy"></a>
 
                                     <!-- Rating Pill Badge (Bottom-Left like Flipkart) -->
                                     <div class="rating-pill">
@@ -829,14 +825,15 @@
                                     </asp:Label>
 
                                     <h4 class="product-name">
-                                        <a href='product-details.aspx?ref=<%# Eval("product_id") %>'>
+                                        <a href='product-details.aspx?ref=<%# Eval("product_id") %>' title='<%# Eval("product_full_name") %>'>
                                             <%# Eval("product_full_name") %>
                                         </a>
                                     </h4>
 
                                     <div class="product-price">
-                                        <span class="original-price">&#8377;<%# Eval("product_market_price") %>
-                                        </span>
+                                        <%# Convert.ToString(Eval("product_market_price")) != "" && Convert.ToString(Eval("product_market_price")) != Convert.ToString(Eval("product_sell_price"))
+                                            ? "<span class=\"original-price\">&#8377;" + Eval("product_market_price") + "</span>" 
+                                            : "" %>
                                         <span class="sale-price">&#8377;<%# Eval("product_sell_price") %></span>
                                     </div>
 
@@ -893,17 +890,13 @@
                                     <div class="swiper-slide">
                                         <div class="trend-product-item">
                                             <div class="trend-img-box">
-                                                <a href='product-details.aspx?ref=<%# Eval("product_id") %>'
-                                                    class="trend-img-link">
-                                                    <img src='auth/<%# Eval("photo_path") %>'
-                                                        alt='<%# Eval("product_full_name") %>'
-                                                        class="trend-product-img" loading="lazy">
-                                                </a>
+                                                <a href='product-details.aspx?ref=<%# Eval("product_id") %>' class="trend-img-link" title='<%# Eval("product_full_name") %>'><img src='auth/<%# Eval("photo_path") %>' alt='<%# Eval("product_full_name") %>' class="trend-product-img" loading="lazy"></a>
                                             </div>
                                             <div class="trend-product-info">
                                                 <h5 class="trend-product-title">
                                                     <a href='product-details.aspx?ref=<%# Eval("product_id") %>'
-                                                        title='<%# Eval("product_full_name") %>'>
+                                                        title='<%# Eval("product_full_name") %>'
+                                                        style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                                                         <%# Eval("product_full_name") %>
                                                     </a>
                                                 </h5>
@@ -943,12 +936,7 @@
                                     <div class="swiper-slide">
                                         <div class="trend-product-item">
                                             <div class="trend-img-box">
-                                                <a href='product-details.aspx?ref=<%# Eval("product_id") %>'
-                                                    class="trend-img-link">
-                                                    <img src='auth/<%# Eval("photo_path") %>'
-                                                        alt='<%# Eval("product_full_name") %>'
-                                                        class="trend-product-img" loading="lazy">
-                                                </a>
+                                                <a href='product-details.aspx?ref=<%# Eval("product_id") %>' class="trend-img-link" title='<%# Eval("product_full_name") %>'><img src='auth/<%# Eval("photo_path") %>' alt='<%# Eval("product_full_name") %>' class="trend-product-img" loading="lazy"></a>
                                             </div>
                                             <div class="trend-product-info">
                                                 <h5 class="trend-product-title">
@@ -993,12 +981,7 @@
                                     <div class="swiper-slide">
                                         <div class="trend-product-item">
                                             <div class="trend-img-box">
-                                                <a href='product-details.aspx?ref=<%# Eval("product_id") %>'
-                                                    class="trend-img-link">
-                                                    <img src='auth/<%# Eval("photo_path") %>'
-                                                        alt='<%# Eval("product_full_name") %>'
-                                                        class="trend-product-img" loading="lazy">
-                                                </a>
+                                                <a href='product-details.aspx?ref=<%# Eval("product_id") %>' class="trend-img-link" title='<%# Eval("product_full_name") %>'><img src='auth/<%# Eval("photo_path") %>' alt='<%# Eval("product_full_name") %>' class="trend-product-img" loading="lazy"></a>
                                             </div>
                                             <div class="trend-product-info">
                                                 <h5 class="trend-product-title">
@@ -1153,7 +1136,7 @@
             </div>
 
             <!-- Products Swiper Carousel for Repeater4 -->
-            <div class="cta-deals-swiper-wrap" data-aos="fade-up" data-aos-delay="250">
+            <div class="cta-deals-swiper-wrap">
                 <div class="swiper cta-deals-swiper" id="swiper-cta-deals">
                     <div class="swiper-wrapper">
                         <asp:Repeater ID="Repeater4" runat="server" OnItemCommand="Repeater4_ItemCommand">
@@ -1165,9 +1148,7 @@
                                             <button type="button" class="deal-wish-btn" title="Add to Wishlist" aria-label="Wishlist">
                                                 <i class="bi bi-heart"></i>
                                             </button>
-                                            <a href='product-details.aspx?ref=<%# Eval("product_id") %>' class="deal-img-link">
-                                                <img src='auth/<%# Eval("photo_path") %>' alt='<%# Eval("product_full_name") %>' class="deal-prod-img" loading="lazy">
-                                            </a>
+                                            <a href='product-details.aspx?ref=<%# Eval("product_id") %>' class="deal-img-link" title='<%# Eval("product_full_name") %>'><img src='auth/<%# Eval("photo_path") %>' alt='<%# Eval("product_full_name") %>' class="deal-prod-img" loading="lazy"></a>
                                         </div>
                                         <div class="deal-card-body">
                                             <h4 class="deal-prod-title">
@@ -1527,252 +1508,252 @@
             </div>
 
             <!-- Review Cards Carousel -->
-           <!-- Review Cards Carousel -->
-<div class="swiper fmart-reviews-swiper" id="fmartCompactSwiper">
-    <div class="swiper-wrapper">
+            <!-- Review Cards Carousel -->
+            <div class="swiper fmart-reviews-swiper" id="fmartCompactSwiper">
+                <div class="swiper-wrapper">
 
-        <!-- Review 1 -->
-        <div class="swiper-slide">
-            <div class="fmart-rev-card">
-                <div class="rev-card-header">
-                    <div class="rev-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <span class="rev-rating-num">5.0</span>
-                    </div>
-                    <span class="rev-verified-tag">
-                        <i class="bi bi-patch-check-fill"></i> Verified
-                    </span>
-                </div>
+                    <!-- Review 1 -->
+                    <div class="swiper-slide">
+                        <div class="fmart-rev-card">
+                            <div class="rev-card-header">
+                                <div class="rev-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="rev-rating-num">5.0</span>
+                                </div>
+                                <span class="rev-verified-tag">
+                                    <i class="bi bi-patch-check-fill"></i>Verified
+                                </span>
+                            </div>
 
-                <h4 class="rev-title">Very comfortable chair</h4>
+                            <h4 class="rev-title">Very comfortable chair</h4>
 
-                <p class="rev-content">
-                    Good quality and comfortable for long working hours. The chair was delivered safely and looks exactly as shown.
-                </p>
+                            <p class="rev-content">
+                                Good quality and comfortable for long working hours. The chair was delivered safely and looks exactly as shown.
+                            </p>
 
-                <div class="rev-card-footer">
-                    <div class="rev-author">
-                        <div class="rev-avatar">VS</div>
-                        <div>
-                            <h6 class="rev-author-name">Vikram S.</h6>
-                            <p class="rev-author-place">Bengaluru</p>
+                            <div class="rev-card-footer">
+                                <div class="rev-author">
+                                    <div class="rev-avatar">VS</div>
+                                    <div>
+                                        <h6 class="rev-author-name">Vikram S.</h6>
+                                        <p class="rev-author-place">Bengaluru</p>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    <span>34</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <span>34</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+                    <!-- Review 2 -->
+                    <div class="swiper-slide">
+                        <div class="fmart-rev-card">
+                            <div class="rev-card-header">
+                                <div class="rev-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="rev-rating-num">5.0</span>
+                                </div>
+                                <span class="rev-verified-tag">
+                                    <i class="bi bi-patch-check-fill"></i>Verified
+                                </span>
+                            </div>
 
-        <!-- Review 2 -->
-        <div class="swiper-slide">
-            <div class="fmart-rev-card">
-                <div class="rev-card-header">
-                    <div class="rev-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <span class="rev-rating-num">5.0</span>
-                    </div>
-                    <span class="rev-verified-tag">
-                        <i class="bi bi-patch-check-fill"></i> Verified
-                    </span>
-                </div>
+                            <h4 class="rev-title">Good quality and finish</h4>
 
-                <h4 class="rev-title">Good quality and finish</h4>
+                            <p class="rev-content">
+                                The finish is really good and the desk feels sturdy. Packaging was also good and delivery was on time.
+                            </p>
 
-                <p class="rev-content">
-                    The finish is really good and the desk feels sturdy. Packaging was also good and delivery was on time.
-                </p>
+                            <div class="rev-card-footer">
+                                <div class="rev-author">
+                                    <div class="rev-avatar">PN</div>
+                                    <div>
+                                        <h6 class="rev-author-name">Pooja N.</h6>
+                                        <p class="rev-author-place">Mumbai</p>
+                                    </div>
+                                </div>
 
-                <div class="rev-card-footer">
-                    <div class="rev-author">
-                        <div class="rev-avatar">PN</div>
-                        <div>
-                            <h6 class="rev-author-name">Pooja N.</h6>
-                            <p class="rev-author-place">Mumbai</p>
+                                <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    <span>28</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <span>28</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+                    <!-- Review 3 -->
+                    <div class="swiper-slide">
+                        <div class="fmart-rev-card">
+                            <div class="rev-card-header">
+                                <div class="rev-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="rev-rating-num">5.0</span>
+                                </div>
+                                <span class="rev-verified-tag">
+                                    <i class="bi bi-patch-check-fill"></i>Verified
+                                </span>
+                            </div>
 
-        <!-- Review 3 -->
-        <div class="swiper-slide">
-            <div class="fmart-rev-card">
-                <div class="rev-card-header">
-                    <div class="rev-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <span class="rev-rating-num">5.0</span>
-                    </div>
-                    <span class="rev-verified-tag">
-                        <i class="bi bi-patch-check-fill"></i> Verified
-                    </span>
-                </div>
+                            <h4 class="rev-title">Strong and worth the price</h4>
 
-                <h4 class="rev-title">Strong and worth the price</h4>
+                            <p class="rev-content">
+                                The build quality is good and the product feels durable. Happy with the purchase and overall service.
+                            </p>
 
-                <p class="rev-content">
-                    The build quality is good and the product feels durable. Happy with the purchase and overall service.
-                </p>
+                            <div class="rev-card-footer">
+                                <div class="rev-author">
+                                    <div class="rev-avatar">AS</div>
+                                    <div>
+                                        <h6 class="rev-author-name">Arvind S.</h6>
+                                        <p class="rev-author-place">Pune</p>
+                                    </div>
+                                </div>
 
-                <div class="rev-card-footer">
-                    <div class="rev-author">
-                        <div class="rev-avatar">AS</div>
-                        <div>
-                            <h6 class="rev-author-name">Arvind S.</h6>
-                            <p class="rev-author-place">Pune</p>
+                                <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    <span>45</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <span>45</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+                    <!-- Review 4 -->
+                    <div class="swiper-slide">
+                        <div class="fmart-rev-card">
+                            <div class="rev-card-header">
+                                <div class="rev-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="rev-rating-num">5.0</span>
+                                </div>
+                                <span class="rev-verified-tag">
+                                    <i class="bi bi-patch-check-fill"></i>Verified
+                                </span>
+                            </div>
 
-        <!-- Review 4 -->
-        <div class="swiper-slide">
-            <div class="fmart-rev-card">
-                <div class="rev-card-header">
-                    <div class="rev-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <span class="rev-rating-num">5.0</span>
-                    </div>
-                    <span class="rev-verified-tag">
-                        <i class="bi bi-patch-check-fill"></i> Verified
-                    </span>
-                </div>
+                            <h4 class="rev-title">Perfect for home office</h4>
 
-                <h4 class="rev-title">Perfect for home office</h4>
+                            <p class="rev-content">
+                                Very useful for daily work from home. Easy to use, comfortable and the quality is better than expected.
+                            </p>
 
-                <p class="rev-content">
-                    Very useful for daily work from home. Easy to use, comfortable and the quality is better than expected.
-                </p>
+                            <div class="rev-card-footer">
+                                <div class="rev-author">
+                                    <div class="rev-avatar">AD</div>
+                                    <div>
+                                        <h6 class="rev-author-name">Ananya D.</h6>
+                                        <p class="rev-author-place">Hyderabad</p>
+                                    </div>
+                                </div>
 
-                <div class="rev-card-footer">
-                    <div class="rev-author">
-                        <div class="rev-avatar">AD</div>
-                        <div>
-                            <h6 class="rev-author-name">Ananya D.</h6>
-                            <p class="rev-author-place">Hyderabad</p>
+                                <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    <span>52</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <span>52</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+                    <!-- Review 5 -->
+                    <div class="swiper-slide">
+                        <div class="fmart-rev-card">
+                            <div class="rev-card-header">
+                                <div class="rev-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="rev-rating-num">5.0</span>
+                                </div>
+                                <span class="rev-verified-tag">
+                                    <i class="bi bi-patch-check-fill"></i>Verified
+                                </span>
+                            </div>
 
-        <!-- Review 5 -->
-        <div class="swiper-slide">
-            <div class="fmart-rev-card">
-                <div class="rev-card-header">
-                    <div class="rev-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <span class="rev-rating-num">5.0</span>
-                    </div>
-                    <span class="rev-verified-tag">
-                        <i class="bi bi-patch-check-fill"></i> Verified
-                    </span>
-                </div>
+                            <h4 class="rev-title">Looks premium</h4>
 
-                <h4 class="rev-title">Looks premium</h4>
+                            <p class="rev-content">
+                                The product looks premium and feels comfortable to use. Delivery was quick and the overall experience was good.
+                            </p>
 
-                <p class="rev-content">
-                    The product looks premium and feels comfortable to use. Delivery was quick and the overall experience was good.
-                </p>
+                            <div class="rev-card-footer">
+                                <div class="rev-author">
+                                    <div class="rev-avatar">RM</div>
+                                    <div>
+                                        <h6 class="rev-author-name">Rohan M.</h6>
+                                        <p class="rev-author-place">Gurugram</p>
+                                    </div>
+                                </div>
 
-                <div class="rev-card-footer">
-                    <div class="rev-author">
-                        <div class="rev-avatar">RM</div>
-                        <div>
-                            <h6 class="rev-author-name">Rohan M.</h6>
-                            <p class="rev-author-place">Gurugram</p>
+                                <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    <span>19</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <span>19</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+                    <!-- Review 6 -->
+                    <div class="swiper-slide">
+                        <div class="fmart-rev-card">
+                            <div class="rev-card-header">
+                                <div class="rev-stars">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="rev-rating-num">5.0</span>
+                                </div>
+                                <span class="rev-verified-tag">
+                                    <i class="bi bi-patch-check-fill"></i>Verified
+                                </span>
+                            </div>
 
-        <!-- Review 6 -->
-        <div class="swiper-slide">
-            <div class="fmart-rev-card">
-                <div class="rev-card-header">
-                    <div class="rev-stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <span class="rev-rating-num">5.0</span>
-                    </div>
-                    <span class="rev-verified-tag">
-                        <i class="bi bi-patch-check-fill"></i> Verified
-                    </span>
-                </div>
+                            <h4 class="rev-title">Good product for the price</h4>
 
-                <h4 class="rev-title">Good product for the price</h4>
+                            <p class="rev-content">
+                                Nice quality and simple design. The product was well packed and installation was easy.
+                            </p>
 
-                <p class="rev-content">
-                    Nice quality and simple design. The product was well packed and installation was easy.
-                </p>
+                            <div class="rev-card-footer">
+                                <div class="rev-author">
+                                    <div class="rev-avatar">SK</div>
+                                    <div>
+                                        <h6 class="rev-author-name">Sneha K.</h6>
+                                        <p class="rev-author-place">New Delhi</p>
+                                    </div>
+                                </div>
 
-                <div class="rev-card-footer">
-                    <div class="rev-author">
-                        <div class="rev-avatar">SK</div>
-                        <div>
-                            <h6 class="rev-author-name">Sneha K.</h6>
-                            <p class="rev-author-place">New Delhi</p>
+                                <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                    <span>41</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <button type="button" class="rev-helpful-btn" onclick="toggleRevLike(this)">
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <span>41</span>
-                    </button>
                 </div>
             </div>
-        </div>
-
-    </div>
-</div>
 
             <!-- Dots Pagination -->
             <div class="rev-swiper-pagination" id="revCompactPagination"></div>
